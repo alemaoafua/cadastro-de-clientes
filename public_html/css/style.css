@@ -1,0 +1,23 @@
+/*
+    CSS relativo a pagina imc.html
+*/
+/* 
+    Created on : 14/11/2017, 14:31:58
+    Author     : cesar.aojunior
+*/
+
+h1, p, h3 {text-align: center;}
+
+#dadosIMC input {text-align: center; margin: 0 auto; display: block;}
+
+#dadosIMC, #resultadoIMC 
+{
+    max-width: 300px; 
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin: 10px auto;
+}
+
+#dadosIMC button {margin: 20px 29px;}
+
+#resultadoIMC {display: none;}

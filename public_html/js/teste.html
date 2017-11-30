@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Teste JSON</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            p{font-weight: bold;}
+            span{font-weight: normal; }
+        </style>
+        
+        <script type="text/javascript">
+            function CarregaJson()
+            {
+                var n = document.getElementsByName('numero')[0].value;
+                var myObj, myJSON, text, obj;
+                myObj = { "Empregados" : 
+                            [
+                                {"name":"Cesar", "Cargo":"Professor", "city":"Botucatu"}, 
+                                {"name":"Gilmara", "Cargo":"Professor", "city":"Pardinho"},
+                                {"name":"Anderson", "Cargo":"Professor", "city":"Botucatu"},
+                                {"name":"Jose Gabriel", "Cargo":"Aluno", "city":"Botucatu"},
+                                {"name":"Gabriel", "Cargo":"Aluno", "city":"Pardinho"},
+                                {"name":"Rubens", "Cargo":"Aluno", "city":"Botucatu"},
+                                {"name":"Eduardo", "Cargo":19, "city":"Pardinho"},
+                                {"name":"Fabio", "Cargo":"Aluno", "city":"Botucatu"},
+                                {"name":"Nicole", "Cargo":"Aluno", "city":"Botucatu"},
+                                {"name":"Benedito", "Cargo":"Aluno", "city":"Botucatu"},
+                                {"name":"Layson", "Cargo":"Aluno", "city":"Pardinho"}
+                            ]
+                        };
+                myJSON = JSON.stringify(myObj);
+                localStorage.setItem("testJSON", myJSON);
+
+                text = localStorage.getItem("testJSON");
+                obj = JSON.parse(text);
+                document.getElementById("nome").innerHTML = obj.name[n];
+                document.getElementById("idade").innerHTML = obj.Cargo[n];
+                document.getElementById("cidade").innerHTML = obj.city[n];
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" placeholder="Digite um numero" name="numero" />
+        <button onclick="CarregaJson();">Carregar</button>
+        <p>Nome: <span id="nome"></span></p><br />
+        <p>Idade: <span id="idade"></span></p><br />
+        <p>Cidade: <span id="cidade"></span></p><br />
+    </body>
+</html>

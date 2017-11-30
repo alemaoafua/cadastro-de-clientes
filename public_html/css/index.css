@@ -1,0 +1,31 @@
+/*
+    CSS responsavel pelo CSS da pagina Index
+*/
+/* 
+    Created on : 16/11/2017, 14:27:37
+    Author     : cesar.aojunior
+*/
+
+h1,h3 {text-align: center;}
+
+.modal-dialog
+{
+    max-width: 300px;
+    border: 1px solid #ccc;
+    margin: 20px auto;
+    border-radius: 6px;
+    padding: 30px;
+}
+
+input
+{
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    border-radius: 6px;
+}
+
+button
+{
+    margin: 5px 25px;
+}
